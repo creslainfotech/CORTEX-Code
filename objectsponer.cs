@@ -3,35 +3,29 @@ using System.Collections;
 
 public class objectsponer : MonoBehaviour {
 
-    public GameObject[] ob;
-    public Transform campos;
+    public GameObject[] ob;                                                                                                    // New Object
+    public Transform campos;                                                                                                   // Choose Camera
     
-	// Use this for initialization
-	void Start () {
-        ObstacleMaker();
+	void Start ()
+
+    {
+        ObstacleMaker();                                                                                                       // Function call - Obstucle Maker
 
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    void Update ()
     {
-
-        transform.Translate(Vector3.down * PlayerPrefs.GetFloat("speed") * Time.deltaTime );
-               
-       
-	}
-
-
-
-
-    void ObstacleMaker()
+        transform.Translate(Vector3.down * PlayerPrefs.GetFloat("speed") * Time.deltaTime );                                   // Transform the obstucle postition down;
+    }
+    
+    void ObstacleMaker()                                                                                                       // Function definiton Obstucle maker
     {
-        GameObject clone = (GameObject)Instantiate (ob[Random.Range(0,ob.Length)], transform.position, Quaternion.identity);
-        clone.name = "Quard"; 
-        clone.AddComponent<BoxCollider2D>();
-        clone.GetComponent<BoxCollider2D>().isTrigger = true;
-        float xx = Random.Range(3, 4);
-        Invoke("ObstacleMaker", xx); 
+        GameObject clone = (GameObject)Instantiate (ob[Random.Range(0,ob.Length)], transform.position, Quaternion.identity);   // Cloning Game Object 
+        clone.name = "Quard";                                                                                                  // Assigning name for new game object
+        clone.AddComponent<BoxCollider2D>();                                                                                   // Adding box collider to the clone game object
+        clone.GetComponent<BoxCollider2D>().isTrigger = true;                                                                  // Triggering Box Collider 
+        float xx = Random.Range(3, 4);                                                                                         // Setting time delay
+        Invoke("ObstacleMaker", xx);                                                                                           // Invoking obstucle maker
     }
 
 }

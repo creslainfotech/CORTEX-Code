@@ -6,13 +6,16 @@ using UnityStandardAssets.CrossPlatformInput;
 public class player1 : MonoBehaviour
 {
    public float playerboundar = 1f;
+
     Rigidbody2D mybody1;
     public float moveforce = 1f; //force to push the player1 (mybody1)
 
+ 
 
     // Player 
     void Start()
     {
+       
         mybody1 = this.GetComponent<Rigidbody2D>();
 
     }

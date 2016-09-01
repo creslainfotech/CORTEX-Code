@@ -1,25 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Obstuclekill : MonoBehaviour {
+public class Obstuclekill : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    void OnTriggerEnter2D(Collider2D coll) // on Collition with Obstucle
 
-    // Update is called once per frame
-    void Update() {
+    {
+        if (coll.gameObject.layer == 9)
+        { 
+             GameObject cs = GameObject.Find("Quard"); // Find game object "Quard" and assign it to  new game object CS
+             Debug.Log("Obstucle Kill"); // Debug Obstucle Kill 
+             Destroy(cs); // Destroy the game object cs
 
-    }
-    void OnTriggerEnter2D()
-    { 
+         }
 
-    GameObject cs = GameObject.Find("Quard");
-        
-                Debug.Log("killq");
-                Destroy(cs);
+        if (coll.gameObject.layer == 10)
+        {
+            GameObject cs = GameObject.Find("Coin"); // Find game object "Quard" and assign it to  new game object CS
+            Debug.Log("Obstucle Kill"); // Debug Obstucle Kill 
+            Destroy(cs); // Destroy the game object cs
+
         }
+    }
    
 }
         

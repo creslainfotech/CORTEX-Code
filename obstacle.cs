@@ -4,43 +4,34 @@ using UnityEngine.SceneManagement;
 
 public class obstacle : MonoBehaviour
 {
-    private score thescore;
-  
+    private score thescore; // The Score
+    public float speed = 1; // Speed of the obstucle
 
-    public float speed = 1; // Use this for initialization
-    void Start()
+    void Start() 
     {
-        thescore = FindObjectOfType<score>();
-     
+        thescore = FindObjectOfType<score>(); // find the game object of type Score and Assign it to thescore
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        transform.position += Vector3.down * 2* speed * Time.deltaTime;
-
+        transform.position += Vector3.down * 2* speed * Time.deltaTime; // Moving the Obstucle Down
     }
 
-void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col) // initilaizing collition decctection
     {
-        Debug.Log("trigger2");
-        if (gameObject.layer == 9)
-        {
+        Debug.Log("Collition With Object");
+        if (gameObject.layer == 9) // Checking the colliton with the player
 
-          
-            Debug.Log("trigger1");
-           
-            thescore.scoreincreasing = false;
-           
-            if (thescore.scorecount > thescore.hiscorecount2)
-            {
-                thescore.hiscorecount1 = thescore.scorecount;
+            {      
+                Debug.Log("Collition with the player");
+                if (thescore.scorecount > thescore.hiscorecount2) // if New High Score
+                    {
+                        thescore.hiscorecount1 = thescore.scorecount; // Replace the score with highscore
+                    }
+                PlayerPrefs.SetFloat("score", thescore.scorecount); // Saving Highscore
+                PlayerPrefs.SetFloat("Highscore", thescore.hiscorecount1); // saving highscore
+                SceneManager.LoadScene("sceen2"); // Load the Game end scene 
             }
-            PlayerPrefs.SetFloat("score", thescore.scorecount);
-            PlayerPrefs.SetFloat("Highscore", thescore.hiscorecount1);
-            SceneManager.LoadScene("sceen2");
-        }
 
     }
 
