@@ -20,18 +20,18 @@ public class coinscript : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col2)
     {
         Debug.Log("trigger3");
-        if (gameObject.layer == 8)
+        if (col2.gameObject.layer == 8)
         {
             Debug.Log("triggercoin");
-                               
-               
-           
+
+
+            GameObject coins1 = GameObject.Find("Coin");
+            Destroy(coins1);
         }
-        GameObject coins1 = GameObject.Find("Coin");
-        Destroy(coins1);
+        
 
     }
 

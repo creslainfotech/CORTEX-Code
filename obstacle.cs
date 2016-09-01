@@ -20,7 +20,7 @@ public class obstacle : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col) // initilaizing collition decctection
     {
         Debug.Log("Collition With Object");
-        if (gameObject.layer == 9) // Checking the colliton with the player
+        if (col.gameObject.layer == 8) // Checking the colliton with the player
 
             {      
                 Debug.Log("Collition with the player");

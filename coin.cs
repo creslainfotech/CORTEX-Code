@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class coin : MonoBehaviour {
+public class coin : MonoBehaviour
+{
 
     public GameObject[] ob1;
     public Transform campos1;
@@ -16,14 +17,8 @@ public class coin : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        transform.Translate(Vector3.down * PlayerPrefs.GetFloat("speed") * Time.deltaTime);
-
-
+      transform.Translate(Vector3.down * PlayerPrefs.GetFloat("speed") * Time.deltaTime);
     }
-
-
-
 
     void CoinMaker()
     {
@@ -31,10 +26,8 @@ public class coin : MonoBehaviour {
         clone.name = "Coin";
         clone.AddComponent<BoxCollider2D>();
         clone.GetComponent<BoxCollider2D>().isTrigger = true;
-        float xyx = Random.Range(3, 4);
+        float xyx = Random.Range(6, 8);
         Invoke("CoinMaker", xyx);
     }
-
 }
-
 
