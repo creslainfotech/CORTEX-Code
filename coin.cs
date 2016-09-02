@@ -26,7 +26,7 @@ public class coin : MonoBehaviour
         clone.name = "Coin";
         clone.AddComponent<BoxCollider2D>();
         clone.GetComponent<BoxCollider2D>().isTrigger = true;
-        float xyx = Random.Range(6, 8);
+        float xyx = Random.Range(7, 8);
         Invoke("CoinMaker", xyx);
     }
 }

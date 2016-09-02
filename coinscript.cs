@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class coinscript : MonoBehaviour {
 
-
-
+    private score thecoinscore;
     public float speed = 1; // Use this for initialization
     void Start()
     {
-   
+        thecoinscore = FindObjectOfType<score>();
 
     }
 
@@ -18,6 +18,8 @@ public class coinscript : MonoBehaviour {
 
         transform.position += Vector3.down * 2 * speed * Time.deltaTime;
 
+           
+      
     }
 
     void OnCollisionEnter2D(Collision2D col2)
@@ -25,16 +27,13 @@ public class coinscript : MonoBehaviour {
         Debug.Log("trigger3");
         if (col2.gameObject.layer == 8)
         {
-            Debug.Log("triggercoin");
-
-
+            thecoinscore.coinscore = thecoinscore.coinscore + 1;
+            Debug.Log("coinscore");
             GameObject coins1 = GameObject.Find("Coin");
             Destroy(coins1);
         }
-        
 
+      
     }
-
-
-
+   
 }

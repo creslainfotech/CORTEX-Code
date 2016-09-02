@@ -15,7 +15,7 @@ public class scoredisplay : MonoBehaviour {
 	void Update () {
         score01 = PlayerPrefs.GetFloat("score");
 
-        scorefinal.text = "00" + Mathf.Round(score01);
+        scorefinal.text = "" + Mathf.Round(score01);
 
         
     }

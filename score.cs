@@ -3,33 +3,36 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class score : MonoBehaviour {
-    public Text scoretext;
-    public Text hiscoretext;
+    public Text scoretext; // Time txt
+    public Text scoretext1; // points txt 
+    public Text hiscoretext; //high score txt 
 
-    public float scorecount = 0;
-    public float hiscorecount1;
-    public float hiscorecount2;
-    public float pointspersecond;
+    public float scorecount = 0; // time 
+    public float hiscorecount1; // highcore present
+    public float hiscorecount2; // highcore initial
+    public float pointspersecond; // time scale
+    public float coinscore; // score 
+    public bool scoreincreasing; // Checking time
 
-    public bool scoreincreasing;
+    void Start ()
+    {
 
-void Start () {
-        hiscorecount2 = PlayerPrefs.GetFloat("Highscore");
+        hiscorecount2 = PlayerPrefs.GetFloat("Highscore"); // loading saved highscore value
      
 	}
-	
-	// Update is called once per frame
 	void Update () {
+
         hiscorecount1 = hiscorecount2;
         hiscorecount2 = PlayerPrefs.GetFloat("Highscore");
+
         if (scoreincreasing)
         {
             scorecount += pointspersecond * Time.deltaTime;
         }
-        
-      
-        scoretext.text = "Score: " + Mathf.Round(scorecount);
 
+        scoretext1.text = "Score: " + Mathf.Round(coinscore);
+        scoretext.text = "Time: " + Mathf.Round(scorecount);
         hiscoretext.text = "Highscore: " + Mathf.Round(hiscorecount2);
     }
+
 }
