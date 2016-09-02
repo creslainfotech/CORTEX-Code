@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using Facebook.Unity;
 
 public class fbscriptnew : MonoBehaviour
@@ -131,4 +132,56 @@ public class fbscriptnew : MonoBehaviour
 
     }
 
+    
+public void Share()
+    {
+        FB.FeedShare (
+            string.Empty,
+            new Uri("http://www.8stags.in"),
+            "Want to Improve Your Brain Skills",
+            "Come Check This Out",
+            "Crotex The 1st 2 charcter single player game",
+            new Uri("http://www.8stags.in/cortex.png"),
+            string.Empty,
+            ShareCallback
+        );
+    }
+
+    void ShareCallback(IResult result)
+    {
+        if (result.Cancelled) {
+            Debug.Log ("Share Cancelled");
+        } else if (!string.IsNullOrEmpty (result.Error)) {
+            Debug.Log ("Error on share!");
+        } else if (!string.IsNullOrEmpty (result.RawResult)) {
+            Debug.Log ("Success on share");
+        }
+    }
+
+
+
+    public void Invite()
+    {
+        FB.Mobile.AppInvite(
+            new Uri("http://www.8stags.in"),
+            new Uri("http://www.8stags.in/cortex.png"),
+            InviteCallback
+        );
+    }
+
+    void InviteCallback(IResult result)
+    {
+        if (result.Cancelled)
+        {
+            Debug.Log("Invite Cancelled");
+        }
+        else if (!string.IsNullOrEmpty(result.Error))
+        {
+            Debug.Log("Error on invite!");
+        }
+        else if (!string.IsNullOrEmpty(result.RawResult))
+        {
+            Debug.Log("Success on Invite");
+        }
+    }
 }
