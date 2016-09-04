@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
+
 
 
 public class button : MonoBehaviour
 {
-
-    public void changescene(string scenename)
+   public void changescene(string scenename)
         {
         SceneManager.LoadScene("game");
         }
@@ -16,6 +18,9 @@ public class button : MonoBehaviour
         Application.Quit();
        
     }
-
+    public void googleplay(string leaderboard)
+    {
+        Social.ShowAchievementsUI ();
+    }
 
 }

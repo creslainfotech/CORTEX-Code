@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using Facebook.Unity;
 
+
 public class fbscriptnew : MonoBehaviour
 {
 
@@ -15,7 +16,8 @@ public class fbscriptnew : MonoBehaviour
 
     void Awake()
     {
-        FB.Init(SetInit, OnHideUnity);
+        
+      FB.Init(SetInit, OnHideUnity);
     }
 
     void SetInit()
@@ -132,10 +134,9 @@ public class fbscriptnew : MonoBehaviour
 
     }
 
-    
-public void Share()
+    public void Share()
     {
-        FB.FeedShare (
+        FB.FeedShare(
             string.Empty,
             new Uri("http://www.8stags.in"),
             "Want to Improve Your Brain Skills",
@@ -149,12 +150,17 @@ public void Share()
 
     void ShareCallback(IResult result)
     {
-        if (result.Cancelled) {
-            Debug.Log ("Share Cancelled");
-        } else if (!string.IsNullOrEmpty (result.Error)) {
-            Debug.Log ("Error on share!");
-        } else if (!string.IsNullOrEmpty (result.RawResult)) {
-            Debug.Log ("Success on share");
+        if (result.Cancelled)
+        {
+            Debug.Log("Share Cancelled");
+        }
+        else if (!string.IsNullOrEmpty(result.Error))
+        {
+            Debug.Log("Error on share!");
+        }
+        else if (!string.IsNullOrEmpty(result.RawResult))
+        {
+            Debug.Log("Success on share");
         }
     }
 
@@ -184,4 +190,6 @@ public void Share()
             Debug.Log("Success on Invite");
         }
     }
+
+
 }

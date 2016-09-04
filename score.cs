@@ -30,9 +30,9 @@ public class score : MonoBehaviour {
             scorecount += pointspersecond * Time.deltaTime;
         }
 
-        scoretext1.text = "Score: " + Mathf.Round(coinscore);
-        scoretext.text = "Time: " + Mathf.Round(scorecount);
-        hiscoretext.text = "Highscore: " + Mathf.Round(hiscorecount2);
+        scoretext1.text = "" + Mathf.Round(coinscore);
+        scoretext.text = "" + Mathf.Round(scorecount);
+        hiscoretext.text = "" + Mathf.Round(hiscorecount2);
     }
 
 }
