@@ -169,7 +169,7 @@ public class fbscriptnew : MonoBehaviour
     public void Invite()
     {
         FB.Mobile.AppInvite(
-            new Uri("http://www.8stags.in"),
+            new Uri("https://play.google.com/store/apps/details?id=com.eightstags.cortexnew"),
             new Uri("http://www.8stags.in/cortex.png"),
             InviteCallback
         );

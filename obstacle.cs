@@ -31,7 +31,7 @@ public class obstacle : MonoBehaviour
             PlayerPrefs.SetFloat("score", thescore.scorecount); //saving score
             PlayerPrefs.SetFloat("scorecoin", thescore.coinscore);// Saving coinscore
             PlayerPrefs.SetFloat("Highscore", thescore.hiscorecount1); // saving highscore
-                SceneManager.LoadScene("sceen2"); // Load the Game end scene 
+            SceneManager.LoadScene("sceen2"); // Load the Game end scene 
             }
 
     }

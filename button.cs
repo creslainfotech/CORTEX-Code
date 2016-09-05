@@ -18,9 +18,13 @@ public class button : MonoBehaviour
         Application.Quit();
        
     }
-    public void googleplay(string leaderboard)
+    public void googleplay1(string achivement1)
     {
         Social.ShowAchievementsUI ();
     }
 
+    public void googleplay2(string leaderboard1)
+    {
+        Social.ShowLeaderboardUI();
+    }
 }
