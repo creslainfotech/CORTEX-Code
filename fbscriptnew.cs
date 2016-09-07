@@ -20,7 +20,8 @@ public class fbscriptnew : MonoBehaviour
       FB.Init(SetInit, OnHideUnity);
     }
 
-    void SetInit()
+
+        void SetInit()
     {
 
         if (FB.IsLoggedIn)
@@ -110,7 +111,7 @@ public class fbscriptnew : MonoBehaviour
         if (result.Error == null)
         {
 
-            UserName.text = "Hi there, " + result.ResultDictionary["first_name"];
+            UserName.text = "Let's Go, " + result.ResultDictionary["first_name"];
 
         }
         else

@@ -35,6 +35,4 @@ public class score : MonoBehaviour {
         hiscoretext.text = "" + Mathf.Round(hiscorecount2);
     }
 
-    public 
-
-}
+    }

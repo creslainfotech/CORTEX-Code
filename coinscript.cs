@@ -25,11 +25,11 @@ public class coinscript : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col2)
     {
         Debug.Log("trigger3");
-        if (col2.gameObject.layer == 8)
+        if (col2.gameObject.layer == 8) // Checking the colliton with the player
         {
-            thecoinscore.coinscore = thecoinscore.coinscore + 1;
-            Debug.Log("coinscore");
-            GameObject coins1 = GameObject.Find("Coin");
+            thecoinscore.coinscore = thecoinscore.coinscore + 1; // Adding coin score
+            Debug.Log("coinscore"); 
+            GameObject coins1 = GameObject.Find("Coin"); // finding the game object
             Destroy(coins1);
         }
 

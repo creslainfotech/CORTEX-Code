@@ -1,26 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 using GooglePlayGames;
+using UnityEngine.UI;
 using UnityEngine.SocialPlatforms;
 
 public class googleplayinitialize : MonoBehaviour {
-    private int score1;
-    private int score2;
-    private int score3;
-    private int score4;
-    public string AchievementId;
-
-    // Use this for initialization
+    private float score1;
+    private float score2;
+    private float score3;
+    private float score4;
+    private int highscore;
+    private int coinscore;
+       // Use this for initialization
     void Start() {
 
         PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.Activate();
         
-        score1 = PlayerPrefs.GetInt("score",0);
-        score2 = PlayerPrefs.GetInt("scorecoin",0);
-        score3 = PlayerPrefs.GetInt("HighScore", 0);
-        score4 = PlayerPrefs.GetInt("highcoinscore", 0);
+        score1 = PlayerPrefs.GetFloat("score",0);
+        score2 = PlayerPrefs.GetFloat("scorecoin",0);
+        score3 = PlayerPrefs.GetFloat("HighScore", 0);
+        score4 = PlayerPrefs.GetFloat("highcoinscore", 0);
+
+        highscore = (int) score2;
+        coinscore = (int) score4;
+
+
     }
+
 
     // Update is called once per frame
     void Update() {
@@ -78,12 +85,12 @@ public class googleplayinitialize : MonoBehaviour {
 
         
 
-        Social.ReportScore(score2, "CgkIyLm0hvgNEAIQCg", (bool success) => {
-            // handle success or failure
+        Social.ReportScore(highscore, "CgkIyLm0hvgNEAIQCg", (bool success) => {
+            // update High Score
         });
 
-        Social.ReportScore(score4, "CgkIyLm0hvgNEAIQBg", (bool success) => {
-            // handle success or failure
+        Social.ReportScore(coinscore, "CgkIyLm0hvgNEAIQBg", (bool success) => {
+            // Update Coin Score
         });
     }
 
