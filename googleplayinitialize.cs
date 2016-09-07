@@ -76,6 +76,8 @@ public class googleplayinitialize : MonoBehaviour {
 
         }
 
+        
+
         Social.ReportScore(score2, "CgkIyLm0hvgNEAIQCg", (bool success) => {
             // handle success or failure
         });

@@ -13,6 +13,7 @@ public class objectsponer : MonoBehaviour {
 
 	}
 
+    
     void Update ()
     {
         transform.Translate(Vector3.down * PlayerPrefs.GetFloat("speed") * Time.deltaTime );                                   // Transform the obstucle postition down;

@@ -139,9 +139,9 @@ public class fbscriptnew : MonoBehaviour
         FB.FeedShare(
             string.Empty,
             new Uri("http://www.8stags.in"),
-            "Want to Improve Your Brain Skills",
-            "Come Check This Out",
-            "Crotex The 1st 2 charcter single player game",
+            "Improve Your Brain Skills",
+            "Crotex The 1st Dual Charcter single Player Game",
+            "Check This Out",
             new Uri("http://www.8stags.in/cortex.png"),
             string.Empty,
             ShareCallback

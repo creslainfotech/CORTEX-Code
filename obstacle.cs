@@ -28,6 +28,7 @@ public class obstacle : MonoBehaviour
                     {
                         thescore.hiscorecount1 = thescore.scorecount; // Replace the score with highscore
                     }
+
             PlayerPrefs.SetFloat("score", thescore.scorecount); //saving score
             PlayerPrefs.SetFloat("scorecoin", thescore.coinscore);// Saving coinscore
             PlayerPrefs.SetFloat("Highscore", thescore.hiscorecount1); // saving highscore
