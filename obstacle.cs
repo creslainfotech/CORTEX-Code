@@ -10,11 +10,13 @@ public class obstacle : MonoBehaviour
 
     void Start() 
     {
+        kill = PlayerPrefs.GetInt("kill");
         thescore = FindObjectOfType<score>(); // find the game object of type Score and Assign it to thescore
     }
 
     void Update()
     {
+        kill = PlayerPrefs.GetInt("kill");
         transform.position += Vector3.down * 2* speed * Time.deltaTime; // Moving the Obstucle Down
     }
 

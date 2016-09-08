@@ -13,6 +13,7 @@ public class fbscriptnew : MonoBehaviour
     public GameObject DialogLoggedOut;
     public GameObject DialogUsername;
     public GameObject DialogProfilePic;
+    public GameObject DialogProfilePicboder;
 
     void Awake()
     {
@@ -128,9 +129,10 @@ public class fbscriptnew : MonoBehaviour
         {
 
             Image ProfilePic = DialogProfilePic.GetComponent<Image>();
+            Image ProfilePicboder = DialogProfilePicboder.GetComponent<Image>();
 
             ProfilePic.sprite = Sprite.Create(result.Texture, new Rect(0, 0, 128, 128), new Vector2());
-
+            ProfilePicboder.sprite = Sprite.Create(result.Texture, new Rect(0, 0, 128, 128), new Vector2());
         }
 
     }
