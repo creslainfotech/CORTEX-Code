@@ -8,23 +8,28 @@ using UnityEngine.SocialPlatforms;
 
 public class button : MonoBehaviour
 {
-   public void changescene(string scenename)
+   public void changescene(string scenename) // reload game
         {
         SceneManager.LoadScene("game");
         }
-    public void gameexit(string exit1)
+    public void gameexit(string exit1) // exit game
     {
         Debug.Log("Exit");
         Application.Quit();
        
     }
-    public void googleplay1(string achivement1)
+    public void googleplay1(string achivement1) // show achivements
     {
         Social.ShowAchievementsUI ();
     }
 
-    public void googleplay2(string leaderboard1)
+    public void googleplay2(string leaderboard1) // show leaderboard
     {
         Social.ShowLeaderboardUI();
+    }
+
+        public void mainscene1() //show main scene
+    {
+        SceneManager.LoadScene("main");
     }
 }

@@ -24,16 +24,22 @@
 
 public static class newachivement
 {
+        public const string achievement_collect_20_coins_in_1_run = "CgkIyLm0hvgNEAIQDA"; // <GPGSID>
         public const string achievement_collect_50_coins_in_1_run = "CgkIyLm0hvgNEAIQAg"; // <GPGSID>
+        public const string achievement_die_100_times = "CgkIyLm0hvgNEAIQEQ"; // <GPGSID>
         public const string achievement_collect_600_points_in_1_run = "CgkIyLm0hvgNEAIQBQ"; // <GPGSID>
         public const string achievement_collect_a_total_of_5000_points = "CgkIyLm0hvgNEAIQCw"; // <GPGSID>
         public const string achievement_collect_100_coins_in_1_run = "CgkIyLm0hvgNEAIQAw"; // <GPGSID>
         public const string leaderboard_coin_collected = "CgkIyLm0hvgNEAIQCg"; // <GPGSID>
+        public const string achievement_collect_a_total_of_500_points = "CgkIyLm0hvgNEAIQDQ"; // <GPGSID>
         public const string achievement_collect_a_total_of_10000_points = "CgkIyLm0hvgNEAIQCA"; // <GPGSID>
+        public const string leaderboard_score = "CgkIyLm0hvgNEAIQBg"; // <GPGSID>
         public const string achievement_collect_1200_points_in_1_run = "CgkIyLm0hvgNEAIQAQ"; // <GPGSID>
+        public const string achievement_die_50_times = "CgkIyLm0hvgNEAIQEA"; // <GPGSID>
         public const string achievement_collect_10_coins_in_1_run = "CgkIyLm0hvgNEAIQCQ"; // <GPGSID>
         public const string achievement_collect_300_points_in_1_run = "CgkIyLm0hvgNEAIQBA"; // <GPGSID>
-        public const string leaderboard_score = "CgkIyLm0hvgNEAIQBg"; // <GPGSID>
+        public const string achievement_die_25_times = "CgkIyLm0hvgNEAIQDw"; // <GPGSID>
+        public const string achievement_collect_125_coins_in_1_run = "CgkIyLm0hvgNEAIQDg"; // <GPGSID>
 
 }
 

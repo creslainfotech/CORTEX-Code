@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class obstacle : MonoBehaviour
 {
     private score thescore; // The Score
+    private int kill; // Total number of times player got killed
     public float speed = 1; // Speed of the obstucle
 
     void Start() 
@@ -30,7 +31,9 @@ public class obstacle : MonoBehaviour
                     }
 
             PlayerPrefs.SetFloat("score", thescore.scorecount); //saving score
-            PlayerPrefs.SetFloat("scorecoin", thescore.coinscore);// Saving coinscore
+            PlayerPrefs.SetFloat("scorecoin", thescore.coinscore);
+            kill = kill + 1;// Saving coinscore
+            PlayerPrefs.SetFloat("kill", kill);
             PlayerPrefs.SetFloat("Highscore", thescore.hiscorecount1); // saving highscore
             SceneManager.LoadScene("sceen2"); // Load the Game end scene 
             }
