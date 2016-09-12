@@ -1,24 +1,20 @@
 #THE CORTEX
 
-The project Has the codes to create a vertical object sponing game with two chacaters,
-The game concpet is unique and it is the first ever dual character controled single player game.
+The project Has the codes to create a vertical object spawning game with two chacaters,
+The game concpet is unique and it is the first ever dual character controlling single player game.
 
 #MAIN GAME FEATURES
 
 The main features of the game includes
-a.) Dual Charcter
-b.) Dual touch controllers in horizontal axis
-c.) Unique Obstucle sponing techniques 
-d.) Facebook login, Share and Invite
-e.) Google Play serviecs, Achivements and leadbordes
-f.) Completing achivements gains you points in google play
+a.) Dual Charcters
+b.) Dual touch controllers on the horizontal axis
+c.) Unique Obstacle spawning techniques 
+d.) Facebook login, Share and Invite options
+e.) Google Play serviecs, Achivements and leadboards
+f.) Completing achivements allows you to  gain points in google play
 
 #MAIN GAME ELEMENTS
 
-Main Game Objects    : player1, player2, coin, obstucles, trap, controllers.
-Main Game Scens      : Main , game , screen2.
-Main Score variables : scorecount, highscorecount1,scorecount,hiscorecount1  
-hiscorecount2, pointspersecond,coinscore.
-#Scripts
+Main Game Objects    : Character 1, Character 2, coins, traps, controllers.
+Main Game Scens      : Main menu , Game screen , Pause menu , Final score screen
 
-  
