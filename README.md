@@ -18,3 +18,9 @@ f.) Completing achivements allows you to  gain points in google play
 Main Game Objects    : Character 1, Character 2, coins, traps, controllers.
 Main Game Scens      : Main menu , Game screen , Pause menu , Final score screen
 
+#ABOUT CORTEX
+
+Cortex is the first Dual Character controlling single player puzzle game that aims to increase the ability of the player to use both parts of the brain at the same time thereby enhancing his/her ability to multi task and improve concentration. 
+Cortex is created with the hope of helping others to improve their concentration by stimulating both lobes of the brain to improve ambidexterity within the player.
+
+The game has been made with a cartoonish art style while utilizing vibrant colors so as to cater to the child within the players of all age groups
