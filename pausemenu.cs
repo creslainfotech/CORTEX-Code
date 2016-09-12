@@ -36,7 +36,13 @@ public class pausemenu : MonoBehaviour {
         }
     }
 
-                                                                                    //shows objects with ShowOnPause tag
+    public void gameexit() // exit game
+    {
+        Application.Quit(); // quit application
+
+    }
+
+    //shows objects with ShowOnPause tag
     public void showPaused()
     {
         foreach (GameObject g in pauseObjects)
