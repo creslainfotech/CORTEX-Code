@@ -6,30 +6,23 @@ using UnityStandardAssets.CrossPlatformInput;
 public class player1 : MonoBehaviour
 {
    public float playerboundar = 1f;
-
-    Rigidbody2D mybody1;
-    public float moveforce = 1f; //force to push the player1 (mybody1)
-
- 
-
-    // Player 
+   Rigidbody2D mybody1;
+   public float moveforce = 1f; //force to push the player1 (mybody1)
+    
+    // Player (Character right)
     void Start()
     {
-       
-        mybody1 = this.GetComponent<Rigidbody2D>();
-
+     mybody1 = this.GetComponent<Rigidbody2D>();
     }
 
-    // 
     void FixedUpdate()
     {
-        Vector3 pos = transform.position;
-        Vector3 moveplayer1 = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"),0,0) * moveforce * Time.deltaTime;
+        Vector3 pos = transform.position; 
+        Vector3 moveplayer1 = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"),0,0) * moveforce * Time.deltaTime; // taking input from controller 
+        pos += moveplayer1;  
+        mybody1.AddForce(moveplayer1); // moving the player 
 
-        pos += moveplayer1;
-        mybody1.AddForce(moveplayer1);
-
-        // Setting the border limits
+        // Setting the border limits for movement 
         float screenRatio = (float) Screen.width / (float) Screen.height;
         float widthOrtho = Camera.main.orthographicSize * screenRatio;
         

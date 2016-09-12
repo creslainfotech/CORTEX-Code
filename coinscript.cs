@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class coinscript : MonoBehaviour {
 
-    private score thecoinscore;
+    private score thecoinscore; 
     public float speed = 1; // Use this for initialization
     void Start()
     {
@@ -12,14 +12,10 @@ public class coinscript : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void Update()
+   void Update()
     {
 
-        transform.position += Vector3.down * 2 * speed * Time.deltaTime;
-
-           
-      
+        transform.position += Vector3.down * 2 * speed * Time.deltaTime; // transforming the position
     }
 
     void OnCollisionEnter2D(Collision2D col2)
@@ -30,7 +26,7 @@ public class coinscript : MonoBehaviour {
             thecoinscore.coinscore = thecoinscore.coinscore + 1; // Adding coin score
             Debug.Log("coinscore"); 
             GameObject coins1 = GameObject.Find("Coin"); // finding the game object
-            Destroy(coins1);
+            Destroy(coins1); // destrroying the coin
         }
 
       

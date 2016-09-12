@@ -4,29 +4,28 @@ using UnityEngine.UI;
 
 public class scoredisplay : MonoBehaviour {
 
-    public Text scorefinal1;
-    public Text scorefinal2;
-    public float score01;
-    public float score02;
-    public float highsccorecoin;
+    public Text scorefinal1; // text element
+    public Text scorefinal2; // text element
+    public float score01; // float score
+    public float score02; // float coin score
+    public float highsccorecoin; // float high score
     // Use this for initialization
     void Start () {
-        score01 = PlayerPrefs.GetFloat("score");
-        score02 = PlayerPrefs.GetFloat("scorecoin");
-        highsccorecoin = PlayerPrefs.GetFloat("highcoinscore");
+        score01 = PlayerPrefs.GetFloat("score");    // loading  score
+        score02 = PlayerPrefs.GetFloat("scorecoin"); // loading coin score
+        highsccorecoin = PlayerPrefs.GetFloat("highcoinscore"); // loading highscore
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
-        score01 = PlayerPrefs.GetFloat("score");
-        score02 = PlayerPrefs.GetFloat("scorecoin");
-        scorefinal1.text = "" + Mathf.Round(score01);
-        scorefinal2.text = "" + Mathf.Round(score02);
-        if (score01 > highsccorecoin) // if New High Score
+        score01 = PlayerPrefs.GetFloat("score");                        // loading score
+        score02 = PlayerPrefs.GetFloat("scorecoin");                    // loading coin score
+        scorefinal1.text = "" + Mathf.Round(score01);                  // displyaing score
+        scorefinal2.text = "" + Mathf.Round(score02);                  // displaying coin score
+        if (score01 > highsccorecoin)                                // if New High Score
         {
             highsccorecoin = score02;
-            PlayerPrefs.SetFloat("highcoinscore", highsccorecoin); // saveing coin score
+            PlayerPrefs.SetFloat("highcoinscore", highsccorecoin); // saving coin score
         }
 
     }

@@ -15,7 +15,7 @@ public class button : MonoBehaviour
     public void gameexit(string exit1) // exit game
     {
         Debug.Log("Exit");
-        Application.Quit();
+        Application.Quit(); // quit application
        
     }
     public void googleplay1(string achivement1) // show achivements

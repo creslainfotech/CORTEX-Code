@@ -22,7 +22,7 @@
 ///
 
 
-public static class newachivement
+public static class newachivement // from google play
 {
         public const string achievement_collect_20_coins_in_1_run = "CgkIyLm0hvgNEAIQDA"; // <GPGSID>
         public const string achievement_collect_50_coins_in_1_run = "CgkIyLm0hvgNEAIQAg"; // <GPGSID>

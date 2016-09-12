@@ -9,23 +9,22 @@ using Facebook.Unity;
 public class fbscriptnew : MonoBehaviour
 {
 
-    public GameObject DialogLoggedIn;
-    public GameObject DialogLoggedOut;
-    public GameObject DialogUsername;
-    public GameObject DialogProfilePic;
-    public GameObject DialogProfilePicboder;
-
+    public GameObject DialogLoggedIn; // for loged in functions
+    public GameObject DialogLoggedOut; // for showing login
+    public GameObject DialogUsername; // username to display
+    public GameObject DialogProfilePic; // profile pic to display
+  
     void Awake()
     {
         
-      FB.Init(SetInit, OnHideUnity);
+      FB.Init(SetInit, OnHideUnity); // initialising 
     }
 
 
         void SetInit()
     {
 
-        if (FB.IsLoggedIn)
+        if (FB.IsLoggedIn) // checking login status
         {
             Debug.Log("FB is logged in");
         }
@@ -52,11 +51,11 @@ public class fbscriptnew : MonoBehaviour
 
     }
 
-    public void FBlogin()
+    public void FBlogin() // login functions
     {
 
         List<string> permissions = new List<string>();
-        permissions.Add("public_profile");
+        permissions.Add("public_profile"); // requesting permision to acces data
 
         FB.LogInWithReadPermissions(permissions, AuthCallBack);
     }
@@ -87,13 +86,13 @@ public class fbscriptnew : MonoBehaviour
     void DealWithFBMenus(bool isLoggedIn)
     {
 
-        if (isLoggedIn)
+        if (isLoggedIn) //showing the loged in window
         {
             DialogLoggedIn.SetActive(true);
             DialogLoggedOut.SetActive(false);
 
-            FB.API("/me?fields=first_name", HttpMethod.GET, DisplayUsername);
-            FB.API("/me/picture?type=square&height=128&width=128", HttpMethod.GET, DisplayProfilePic);
+            FB.API("/me?fields=first_name", HttpMethod.GET, DisplayUsername); // loading facebook username
+            FB.API("/me/picture?type=square&height=128&width=128", HttpMethod.GET, DisplayProfilePic); // lodaing facebook profile pic
 
         }
         else
@@ -104,7 +103,7 @@ public class fbscriptnew : MonoBehaviour
 
     }
 
-    void DisplayUsername(IResult result)
+    void DisplayUsername(IResult result) 
     {
 
         Text UserName = DialogUsername.GetComponent<Text>();
@@ -112,7 +111,7 @@ public class fbscriptnew : MonoBehaviour
         if (result.Error == null)
         {
 
-            UserName.text = "Let's Go, " + result.ResultDictionary["first_name"];
+            UserName.text = "Let's Go, " + result.ResultDictionary["first_name"]; // showing facebook username
 
         }
         else
@@ -129,15 +128,13 @@ public class fbscriptnew : MonoBehaviour
         {
 
             Image ProfilePic = DialogProfilePic.GetComponent<Image>();
-            Image ProfilePicboder = DialogProfilePicboder.GetComponent<Image>();
+            ProfilePic.sprite = Sprite.Create(result.Texture, new Rect(0, 0, 128, 128), new Vector2()); // lodaing facebook profile pic
 
-            ProfilePic.sprite = Sprite.Create(result.Texture, new Rect(0, 0, 128, 128), new Vector2());
-            ProfilePicboder.sprite = Sprite.Create(result.Texture, new Rect(0, 0, 128, 128), new Vector2());
         }
 
     }
 
-    public void Share()
+    public void Share() // share function
     {
         FB.FeedShare(
             string.Empty,
@@ -169,11 +166,11 @@ public class fbscriptnew : MonoBehaviour
 
 
 
-    public void Invite()
+    public void Invite() // invite function
     {
         FB.Mobile.AppInvite(
-            new Uri("https://play.google.com/apps/testing/com.eightstags.cortexnew"),
-            new Uri("http://www.8stags.in/cortex.png"),
+            new Uri("https://fb.me/542620622603464"),
+            new Uri("http://8stags.in/logo.png"),
             InviteCallback
         );
     }

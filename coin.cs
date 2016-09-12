@@ -4,17 +4,15 @@ using System.Collections;
 public class coin : MonoBehaviour
 {
 
-    public GameObject[] ob1;
-    public Transform campos1;
+    public GameObject[] ob1; // new gameobect for coin spawning
+    public Transform campos1; // chosing the camera
 
-    // Use this for initialization
     void Start()
     {
-        CoinMaker();
+        CoinMaker(); // calling the function
 
     }
 
-    // Update is called once per frame
     void Update()
     {
       transform.Translate(Vector3.down * PlayerPrefs.GetFloat("speed") * Time.deltaTime);
@@ -22,12 +20,12 @@ public class coin : MonoBehaviour
 
     void CoinMaker()
     {
-        GameObject clone = (GameObject)Instantiate(ob1[Random.Range(0, ob1.Length)], transform.position, Quaternion.identity);
-        clone.name = "Coin";
-        clone.AddComponent<BoxCollider2D>();
-        clone.GetComponent<BoxCollider2D>().isTrigger = true;
-        float xyx = Random.Range(7, 8);
-        Invoke("CoinMaker", xyx);
+        GameObject clone = (GameObject)Instantiate(ob1[Random.Range(0, ob1.Length)], transform.position, Quaternion.identity); // cloneing the coin 
+        clone.name = "Coin"; // assigning name to the clone
+        clone.AddComponent<BoxCollider2D>(); // adding box collider to the clone
+        clone.GetComponent<BoxCollider2D>().isTrigger = true; // setting the box collider trigger 
+        float xyx = Random.Range(7, 8); // time between each coins
+        Invoke("CoinMaker", xyx); // invoiking the function with respect to time xyz
     }
 }
 

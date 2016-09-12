@@ -5,30 +5,22 @@ using UnityEngine.SceneManagement;
 public class pausemenu : MonoBehaviour {
 
     GameObject[] pauseObjects;
-
-    
-    void Start()
+   void Start()
     {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         hidePaused();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-             
-    }
-    //Reloads the Level
-    public void Reload()
+                                                                                   //Reloads the Level
+    public void Reload()    
     {
         AudioListener.pause = false;
         SceneManager.LoadScene("game");
     }
-
-    //controls the pausing of the scene
-    public void pauseControl()
+        
+                                                                                    //controls the pausing of the scene
+    public void pauseControl()  
     {
         if (Time.timeScale == 1)
         {
@@ -44,7 +36,7 @@ public class pausemenu : MonoBehaviour {
         }
     }
 
-    //shows objects with ShowOnPause tag
+                                                                                    //shows objects with ShowOnPause tag
     public void showPaused()
     {
         foreach (GameObject g in pauseObjects)
@@ -54,7 +46,7 @@ public class pausemenu : MonoBehaviour {
         }
     }
 
-    //hides objects with ShowOnPause tag
+                                                                                    //hides objects with ShowOnPause tag
     public void hidePaused()
     {
         foreach (GameObject g in pauseObjects)
