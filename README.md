@@ -24,3 +24,13 @@ Cortex is the first Dual Character controlling single player puzzle game that ai
 Cortex is created with the hope of helping others to improve their concentration by stimulating both lobes of the brain to improve ambidexterity within the player.
 
 The game has been made with a cartoonish art style while utilizing vibrant colors so as to cater to the child within the players of all age groups
+
+
+#Try Our Game
+Dwonload From Google Play : https://play.google.com/store/apps/details?id=com.eightstags.cortexnew
+
+#How To Play
+Watch our Youtube Video : https://youtu.be/nC4GGkFF6BM
+
+#Team
+8stags : www.8stags.in
