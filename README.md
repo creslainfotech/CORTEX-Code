@@ -27,7 +27,7 @@ The game has been made with a cartoonish art style while utilizing vibrant color
 
 
 #Try Our Game
-Dwonload From Google Play : https://play.google.com/store/apps/details?id=com.eightstags.cortexnew
+Download From Google Play : https://play.google.com/store/apps/details?id=com.eightstags.cortexnew
 
 #How To Play
 Watch our Youtube Video : https://youtu.be/nC4GGkFF6BM
