@@ -18,6 +18,11 @@ public class button : MonoBehaviour
         Application.Quit(); // quit application
        
     }
+
+    public void turotial()
+    {
+   
+    }
     public void googleplay1(string achivement1) // show achivements
     {
         Social.ShowAchievementsUI ();

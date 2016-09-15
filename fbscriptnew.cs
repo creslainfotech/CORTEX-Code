@@ -21,7 +21,7 @@ public class fbscriptnew : MonoBehaviour
     }
 
 
-        void SetInit()
+    void SetInit()
     {
 
         if (FB.IsLoggedIn) // checking login status
