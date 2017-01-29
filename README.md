@@ -32,6 +32,6 @@ Download From Google Play : https://play.google.com/store/apps/details?id=com.ei
 #How To Play
 Watch our Youtube Video : https://youtu.be/nC4GGkFF6BM
 
-Developed by : Bodhish Thomas
-Co-founder 
+#Developed by Bodhish Thomas
+Co-founder,
 Cresla Infotech
